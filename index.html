@@ -9,31 +9,42 @@
 	<title>Survey Page</title>
 </head>
 <body>
-	<h1>Survey Page for Every Startup</h1>
+	<h1 id="title">Survey Page for Every Startup</h1>
 
-	<p id="description">Please fill out this form and answer as accurate as you can.</p>
-	<div>
+	<p id="description">Please fill out this form and answer the question as accurate as you can.</p>
+	<div class="container">
 		<form id="survey-form">
-			<label id="name-label">Your Name</label><br>
-			<input type="text" name="names" id="name" placeholder="Name" required><br><br>
-			<label id="email-label">Your Email</label><br>
-			<input type="text" name="email" placeholder="Email" required><br><br>
-			<label id="number-label">Your Age</label><br>
-			<input type="number" name="number" id="number" min="18" max="70" placeholder="Age" required><br><br>
+			<label id="name-label"><b>Your Name</b></label><br>
+			<input type="text" name="names" id="name" placeholder="Enter your name here" required><br><br>
+			<label id="email-label"><b>Your Email</b></label><br>
+			<input type="email" name="email" placeholder="Enter your email here" required="email" id="email"><br><br>
+			<label id="number-label"><b>Your Age</b></label><br>
+			<input type="number" name="number" id="number" min="18" max="70" placeholder="Enter your age here" required><br><br>
 
-			<p>What do you like about our company?</p>
+			<p><b>What position best describes you?</b></p>
+			<select id="dropdown">
+				<option value="sales">Sales</option>
+				<option value="engineer">Engineer</option>
+				<option value="finance">Finance</option>
+				<option value="operation">Operation</option>
+			</select>
+
+			<p><b>What do you like about our company?</b></p>
 			<input type="radio" name="company" value="friendly">Friendly colleagues<br>
 			<input type="radio" name="company" value="challenges">Challenging work<br>
-			<input type="radio" name="company" value="salary">competitive salary<br>
-			<p>How can we improve our company?</p>
-			<input type="checkbox" checked="checked">Give more autonomy to employees<br>
-			<input type="checkbox" checked="checked">Use normal words instead of buzzwords like "10x engineers."<br>
-			<input type="checkbox" checked="checked">Stop forcing employees to work overtime.<br>
-			<input type="checkbox" checked="checked">Reduce unneccsay numbers of meeting.<br>
-			<input type="checkbox" checked="checked">Increase number of holidays.<br>
-			<input type="checkbox" checked="checked">Save company money by cutting off uesless t-shirts, stickers, and free foods.<br><br>
-			<textarea placeholder="additional comments"></textarea><br><br>
-			<button>Submit</button>
+			<input type="radio" name="company" value="salary">Competitive salary<br>
+
+			<p><b>How can we improve our company?</b></p>
+			<input type="checkbox" checked="checked" value="improve">Give more autonomy to employees.<br>
+			<input type="checkbox" checked="checked" value="improve">Use normal words instead of buzzwords like "10x engineers."<br>
+			<input type="checkbox" checked="checked" value="improve">Stop forcing employees to work overtime.<br>
+			<input type="checkbox" checked="checked" value="improve">Reduce unneccsay numbers of meeting.<br>
+			<input type="checkbox" checked="checked" value="improve">Increase number of holidays.<br>
+			<input type="checkbox" checked="checked" value="improve">Save company money by cutting off uesless t-shirts, stickers, and free foods.<br><br>
+
+			<p><b>Any other comments you would like to say?</b></p>
+			<textarea placeholder="Additional comments"></textarea><br><br>
+			<button id="submit">Submit</button>
 		</form>
 	</div>
 
